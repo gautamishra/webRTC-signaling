@@ -2,7 +2,7 @@
 console.log("laoded");
 let peerConnection = '';
 let dataChannel;
-let connection = new WebSocket("ws://webrtc-sanketan.herokuapp.com/socket");
+let connection = new WebSocket("wss://webrtc-sanketan.herokuapp.com/socket");
 const remoteStream = new MediaStream();
 
 connection.onopen = () => {
