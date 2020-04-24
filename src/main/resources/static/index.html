@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebRTC</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+</head>
+<body>
+  Giddy Up !!!
+
+  <button onclick="startProcess(event)">Connect</button>
+
+  <button onclick="sendDataChannelMessage('say Hi on my Dick behalf')">send Message and test</button>
+
+  <button onclick="playVideoFromCamera()">open camera</button>
+
+  <video id="localVideo" autoplay playsinline controls="false">
+  </video>
+
+  <div >
+    <video id="remoteVideo" autoplay playsinline controls="false"></video>
+    
+  </div>
+  
+
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
