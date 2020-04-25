@@ -167,7 +167,7 @@ const constraints = {
 
 async function playVideoFromCamera() {
     try {
-        const constraints = {'video': true, 'audio': true};
+        const constraints = {'video': true, 'audio': true,  'echoCancellation': true};
         const localStream = await navigator.mediaDevices.getUserMedia(constraints);
         const videoElement = document.querySelector('video#localVideo');
         videoElement.srcObject = localStream;
