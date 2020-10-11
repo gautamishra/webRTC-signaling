@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #cfd9df, #e2ebf0);
+    font-family: "Raleway script=latin rev=1";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.open-camera {
+    margin-left: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    margin-right: 40px;
+}
+
+.user-info {
+    display: flex;
+    color: black;
+    padding: 20px;
+    justify-content: center;
+    justify-content: center;
+}
+
+.label-text {
+    font-size: 20px;
+    line-height: 33px;
+}
+
+input {
+    border: none;
+    border-radius: 7px;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none !important;
+    border:1px solid skyblue;
+    box-shadow: 0 0 10px skyblue;
+}
+
+.video-controls {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#localVid{
+
+}
+
+button {
+    background-color: deepskyblue;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+}
+
+h2 {
+    line-height: 33px;
+}
+
+button:hover {
+    cursor: pointer;
+}

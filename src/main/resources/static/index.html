@@ -1,32 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>WebRTC</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <title>WebRTC</title>
+    <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 </head>
 <body>
-  Giddy Up !!!
+<div class="container">
 
-  <button onclick="startProcess(event)">Connect</button>
+    <div class="flex user-info center">
+        <h2>USER ID - <span id="uid"></span></h2>
+        <button class="open-camera" onclick="playVideoFromCamera()">open camera</button>
+    </div>
+    <div class="controls">
+        <div class="form-group">
+            <label class="label-text" for="remoteUser">Remote User ID - </label>
+            <input type="text" name="remoteUser" id="remoteUser">
+        </div>
+        <div class="form-group">
+            <button onclick="startProcess(event)">Connect</button>
+        </div>
+        <div
+        <div class="form-group">
+            <button onclick="sendDataChannelMessage('say Hi on my Dick behalf')">send Message and test</button>
+        </div>
 
-  <button onclick="sendDataChannelMessage('say Hi on my Dick behalf')">send Message and test</button>
+    </div>
+    <div class="video-controls">
+        <div id="localVid">
+            <video width="300" height="300" id="localVideo" autoplay playsinline controls="false" muted="muted">
+            </video>
+        </div>
 
-  <button onclick="playVideoFromCamera()">open camera</button>
+        <div id="remoteVid">
+            <video id="remoteVideo" autoplay playsinline controls="false"></video>
+        </div>
 
-  <video id="localVideo" autoplay playsinline controls="false" muted="muted">
-  </video>
-
-  <div >
-    <video id="remoteVideo" autoplay playsinline controls="false"></video>
-    
-  </div>
-  
-
-
-  <script type="text/javascript" src="main.js"></script>
+    </div>
+</div>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
