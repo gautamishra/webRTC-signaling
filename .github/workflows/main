@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
+        with:
+          heroku_api_key: ${{bfdf7485-40ec-4967-a8c2-2375567b8e9f}}
+          heroku_app_name: "webrtc-sanketan"
+          heroku_email: "mishragauta1994@gmail.com"
